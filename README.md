@@ -7,7 +7,8 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 
 ## Live Preview
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Sun%20Jul%2023%202023%2020%3A23%3A51%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Jul%2023%202023%2020%3A31%3A13%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/64f0bb10bf0d3605bcd1d97e09d7ffa8c18cbaa7) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T20:23:51Z 
 - [Create action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/7ef84a7a6fcfe730d5313d868419aa9e3c99f358) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T20:17:19Z 
 - [added project files](https://github.com/akifmt/github-update-recent-commits/commit/f5e89aeaa2ec5de3a31f9fb0df25a09e6ed56a45) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T20:09:58Z 
 <!-- Latest_Commits_End -->
