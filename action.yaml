@@ -1,0 +1,44 @@
+name: 'github-update-recent-commits'
+description: 'A GitHub Action that allows you to retrieve and update recent commits'
+branding:
+  icon: 'align-left'
+  color: 'blue'
+
+inputs:
+  GH_ACCESS_TOKEN:
+    description: Access token used to authenticate
+    required: true
+  MAX_COMMITS:
+    description: Max commits
+    required: true
+    default: 10
+  COMMIT_SHOW_TYPE:
+    description: Commit show type (LIST, TABLE)
+    required: false
+    default: LIST
+  GET_COMMITS_USER_NAME:
+    description: Get Commits username
+    required: true
+  GET_COMMITS_REPO_NAME:
+    description: Get Commits repo
+    required: true
+  GET_COMMITS_BRANCH_NAME:
+    description: Get Commits branch
+    required: true
+  UPDATE_MDFILE_USER_NAME:
+    description: Update MDFile username
+    required: true
+  UPDATE_MDFILE_REPO_NAME:
+    description: Update MDFile repo
+    required: true
+  UPDATE_MDFILE_BRANCH_NAME:
+    description: Update MDFile branch
+    required: true
+  UPDATE_MDFILE_NAME:
+    description: Update MDFile name
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+  
