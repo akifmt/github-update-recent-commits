@@ -1,0 +1,23 @@
+name: Update READMEs
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: '*/30 * * * *'
+  
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: akifmt/github-update-recent-commits@main
+        with:
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          MAX_COMMITS: 10
+          COMMIT_SHOW_TYPE: LIST
+          GET_COMMITS_USER_NAME: akifmt
+          GET_COMMITS_REPO_NAME: github-update-recent-commits
+          GET_COMMITS_BRANCH_NAME: main
+          UPDATE_MDFILE_USER_NAME: akifmt
+          UPDATE_MDFILE_REPO_NAME: github-update-recent-commits
+          UPDATE_MDFILE_BRANCH_NAME: main
+          UPDATE_MDFILE_NAME: README.md
