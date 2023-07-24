@@ -7,7 +7,8 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 
 ## Live Preview
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Mon%20Jul%2024%202023%2017%3A31%3A02%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Mon%20Jul%2024%202023%2018%3A09%3A05%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/bac36b89b6bf4f6b31f8ed5c3d0e382623cc1ef4) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T17:31:03Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/f0d2553fa83a90f6815afd60764a254c0d301b8f) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T17:04:33Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/90f71c688b42f4c597239029d6b5408faf261d90) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T16:35:30Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/cd2b5973eb720b9d1c4e40b17bbd99554443caa6) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T16:07:13Z 
@@ -17,7 +18,6 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/7546eea1e038ed66ba30e8c475d7eab3ad317d65) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T14:05:14Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/3996b3e674381b78cbef2f656052818c6e33b35d) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T13:31:19Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/65fbaa2c1f496dac086136b8eb0dc3509985d81e) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T13:10:43Z 
-- [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/85a1481f9beabbf5c7e22c816fcc108855cfadbc) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T12:49:12Z 
 <!-- Latest_Commits_End -->
 
 ## Instructions
