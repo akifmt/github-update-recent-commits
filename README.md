@@ -7,7 +7,10 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 
 ## Live Preview
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Mon%20Jul%2024%202023%2023%3A45%3A59%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Mon%20Jul%2024%202023%2023%3A58%3A37%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/cd2fb84c1eeef5ce9b89929f6a0c925630aa937b) - 2023-07-24T23:58:09Z 
+- :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/b5e3940bbec03fa162ade7f091581629a0a36f51) - 2023-07-24T23:55:15Z 
+- :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/f308cbac3972b11c10106813109d3d61dacaaab2) - 2023-07-24T23:46:00Z 
 - :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/2fa7ac94bd7d37b5a7cc9400d4a054c5b92f8499) - 2023-07-24T23:45:34Z 
 - :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/8f6e7b848a2cddff91bcc1641a340cb0854b8f65) - 2023-07-24T23:36:08Z 
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/c7064bc05f4c4b6b8050892768768144d506f57c) - 2023-07-24T23:35:49Z 
@@ -15,9 +18,6 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/51266a9cd73ea8a8db9d8299a1af31d57743cf7a) - 2023-07-24T23:34:03Z 
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/f1a638d5fec24cc97d4c4ba4e30339681a87d63f) - 2023-07-24T23:29:50Z 
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/f6adaa75247cafec099237f2ceaa8a48ce3808ac) - 2023-07-24T23:28:20Z 
-- :page_facing_up: [added custom commit line](https://github.com/akifmt/github-update-recent-commits/commit/5c6c83692213a38c87b4d8ea03560fa7d4207321) - 2023-07-24T23:21:24Z 
-- :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/6a6fe4b1cefa0fba11cb52e94f726ac9c5e1199c) - 2023-07-24T22:59:11Z 
-- :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/81df3d27c4179c6096c710beff1edc9b49ce745c) - 2023-07-24T22:31:17Z 
 <!-- Latest_Commits_End -->
 
 ## Instructions
