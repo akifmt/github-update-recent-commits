@@ -1,7 +1,7 @@
 # github-update-recent-commits
 
-![Version](https://img.shields.io/github/v/release/AAAAA/AAAAA?color=blue)
-![Contributors](https://img.shields.io/github/contributors/AAAAA/AAAAA?color=dark-green) ![Issues](https://img.shields.io/github/issues/AAAAA/AAAAA) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](#)
+![Version](https://img.shields.io/github/v/release/akifmt/github-update-recent-commits?color=blue)
+![Contributors](https://img.shields.io/github/contributors/akifmt/github-update-recent-commits?color=dark-green) ![Issues](https://img.shields.io/github/issues/akifmt/github-update-recent-commits) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](#)
 
 Updates MD file with the recent commits. The configuration must be on the default branch
 
@@ -45,6 +45,7 @@ jobs:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
           MAX_COMMITS: 10
           COMMIT_SHOW_TYPE: LIST
+          COMMIT_CUSTOM_LINE: "- :page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}"
           GET_COMMITS_USER_NAME: THIS_IS_USERNAME_FOR_GET_COMMITS
           GET_COMMITS_REPO_NAME: THIS_IS_REPONAME_FOR_GET_COMMITS
           GET_COMMITS_BRANCH_NAME: THIS_IS_BRANCHNAME_FOR_GET_COMMITS
@@ -54,6 +55,10 @@ jobs:
           UPDATE_MDFILE_NAME: THIS_IS_MDFILENAME
 ```
 - This workflow works every 15 mins.
+- COMMIT_SHOW_TYPE should be LIST, TABLE, CUSTOM
+- When selecting CUSTOM, need to fill COMMIT_CUSTOM_LINE
+- COMMIT_CUSTOM_LINE, supports MD, HTML. All Parameters; ```{{{commit_author_name}}}``` ```{{{commit_author_email}}}``` ```{{{commit_link}}}``` ```{{{commit_message}}}``` ```{{{commit_date}}}```
+	- Example;``` ":page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}" ```
 - Give your access token 'repo' permission.
 
 ## Development Environment:
@@ -62,6 +67,7 @@ jobs:
 GH_ACCESS_TOKEN=THIS_IS_YOUR_TOKEN
 MAX_COMMITS=10
 COMMIT_SHOW_TYPE=LIST
+COMMIT_CUSTOM_LINE: - :page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}
 GET_COMMITS_USER_NAME=THIS_IS_USERNAME_FOR_GET_COMMITS
 GET_COMMITS_REPO_NAME=THIS_IS_REPONAME_FOR_GET_COMMITS
 GET_COMMITS_BRANCH_NAME=THIS_IS_BRANCHNAME_FOR_GET_COMMITS
