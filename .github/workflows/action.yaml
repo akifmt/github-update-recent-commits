@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: akifmt/github-update-recent-commits@main
         with:
-          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAX_COMMITS: 10
           COMMIT_SHOW_TYPE: CUSTOM
           COMMIT_CUSTOM_LINE: "- :page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}"
