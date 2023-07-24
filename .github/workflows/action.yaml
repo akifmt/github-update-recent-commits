@@ -11,7 +11,7 @@ jobs:
         with:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
           MAX_COMMITS: 10
-          COMMIT_SHOW_TYPE: LIST
+          COMMIT_SHOW_TYPE: CUSTOM
           COMMIT_CUSTOM_LINE: "- :page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}"
           GET_COMMITS_USER_NAME: akifmt
           GET_COMMITS_REPO_NAME: github-update-recent-commits
