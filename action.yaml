@@ -13,9 +13,13 @@ inputs:
     required: true
     default: 10
   COMMIT_SHOW_TYPE:
-    description: Commit show type (LIST, TABLE)
+    description: Commit show type (LIST, TABLE, CUSTOM)
     required: false
     default: LIST
+  COMMIT_CUSTOM_LINE:
+    description: Define a custom line. (MD, HTML) All Parameters; {{{commit_author_name}}} {{{commit_author_email}}} {{{commit_link}}} {{{commit_message}}} {{{commit_date}}} Example; ":page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}"
+    required: false
+    default: - :page_facing_up: [{{{commit_message}}}]({{{commit_link}}}) - {{{commit_date}}}
   GET_COMMITS_USER_NAME:
     description: Get Commits username
     required: true

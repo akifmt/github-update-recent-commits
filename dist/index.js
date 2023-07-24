@@ -9925,9 +9925,17 @@ const octokit = __nccwpck_require__(6762);
 
 const IS_ENV_DEVELOPMENT = process.argv.includes('dev');
 
+const customcommitauthornameparameter = "{{{commit_author_name}}}"; // commit.author.name
+const customcommitauthoremailparameter = "{{{commit_author_email}}}"; // commit.author.email
+const customcommitlinkparameter = "{{{commit_link}}}"; // commitlink
+const customcommitmessageparameter = "{{{commit_message}}}"; // commit.message
+const customcommitdateparameter = "{{{commit_date}}}"; // commit.author.date
+
 const token = 					IS_ENV_DEVELOPMENT ? process.env.GH_ACCESS_TOKEN 			: core.getInput("GH_ACCESS_TOKEN");
 const MAX_COMMITS = 			IS_ENV_DEVELOPMENT ? process.env.MAX_COMMITS				: core.getInput("MAX_COMMITS");
 const COMMIT_SHOW_TYPE = 		IS_ENV_DEVELOPMENT ? process.env.COMMIT_SHOW_TYPE			: core.getInput("COMMIT_SHOW_TYPE");
+const COMMIT_CUSTOM_LINE = 		IS_ENV_DEVELOPMENT ? process.env.COMMIT_CUSTOM_LINE			: core.getInput("COMMIT_CUSTOM_LINE");
+
 const getcommitsusername = 		IS_ENV_DEVELOPMENT ? process.env.GET_COMMITS_USER_NAME		: core.getInput("GET_COMMITS_USER_NAME");
 const getcommitsreponame = 		IS_ENV_DEVELOPMENT ? process.env.GET_COMMITS_REPO_NAME		: core.getInput("GET_COMMITS_REPO_NAME");
 const getcommitsbranchname = 	IS_ENV_DEVELOPMENT ? process.env.GET_COMMITS_BRANCH_NAME	: core.getInput("GET_COMMITS_BRANCH_NAME");
@@ -9935,6 +9943,7 @@ const updatemdfileusername = 	IS_ENV_DEVELOPMENT ? process.env.UPDATE_MDFILE_USE
 const updatemdfilereponame = 	IS_ENV_DEVELOPMENT ? process.env.UPDATE_MDFILE_REPO_NAME	: core.getInput("UPDATE_MDFILE_REPO_NAME");
 const updatemdfilebranchname = 	IS_ENV_DEVELOPMENT ? process.env.UPDATE_MDFILE_BRANCH_NAME	: core.getInput("UPDATE_MDFILE_BRANCH_NAME");
 const updatemdfilename = 		IS_ENV_DEVELOPMENT ? process.env.UPDATE_MDFILE_NAME			: core.getInput("UPDATE_MDFILE_NAME");
+
 
 if (!token){
 	core.setFailed("TOKEN NOT DEFINED."); 
@@ -9949,6 +9958,11 @@ if (!getcommitsusername || !getcommitsreponame || !getcommitsbranchname ||
 
 const client = new octokit.Octokit({ auth: token });
 
+function Run(){
+	getAllCommits();
+}
+
+
 async function getAllCommits() {
 	try {
 		const res = await client.request(`GET /repos/${getcommitsusername}/${getcommitsreponame}/commits`, {
@@ -9958,16 +9972,21 @@ async function getAllCommits() {
 
 		const data = res.data;
 
-		updateMDFile(data);
+		getUpdateMDFile(data);
 
 	} catch (error) {
-		//console.log(error);
+		const errordetails = `getAllCommits:: ` + 
+		 					 `GET_COMMITS_USER_NAME:${getcommitsusername} or ` +
+					 		 `GET_COMMITS_REPO_NAME:${getcommitsreponame} or ` + 
+					 		 `GET_COMMITS_BRANCH_NAME:${getcommitsbranchname}`; 
+		core.setFailed(errordetails);
 		core.setFailed(error); 
 		return;
 	}
 }
 
-async function updateMDFile(data) {
+
+async function getUpdateMDFile(data) {
 	try {
 		const res = await client.request(`GET /repos/${updatemdfileusername}/${updatemdfilereponame}/contents/${updatemdfilename}`, {
 			branch : updatemdfilebranchname
@@ -9980,17 +9999,19 @@ async function updateMDFile(data) {
 		switch(COMMIT_SHOW_TYPE) {
 			case 'LIST':
 				commitsstring = prepareCommitsAsListLineString(data);
-			  break;
+				break;
 			case 'TABLE':
-				commitsstring = prepareCommitsAsTableLineString(data);
-			  break;
+			    commitsstring = prepareCommitsAsTableLineString(data);
+				break;
+			case 'CUSTOM':
+				commitsstring = prepareCommitsAsCustomLineString(data, COMMIT_CUSTOM_LINE);
+				break;
 			default:
 				commitsstring = prepareCommitsAsListLineString(data);
 		  }
 		
 		const checkContentContaions = rawContent.includes(commitsstring);
 		if(checkContentContaions){
-			//console.log("INFO: MD FILE IS UP TO DATE. CANCELED.");
   			core.notice("INFO: MD FILE IS UP TO DATE. CANCELED.");
 			return;
 		}
@@ -10009,11 +10030,17 @@ async function updateMDFile(data) {
 		commitNewMDFile(path, sha, encoding, updatedContent);
 
 	} catch (error) {
-		//console.log(error);
+		const errordetails = `getUpdatedMdFile:: ` + 
+							 `UPDATE_MDFILE_USER_NAME:${updatemdfileusername} or ` +
+							 `UPDATE_MDFILE_REPO_NAME:${updatemdfilereponame} or ` + 
+							 `UPDATE_MDFILE_BRANCH_NAME:${updatemdfilebranchname} or ` + 
+					 		 `UPDATE_MDFILE_NAME:${updatemdfilename}`; 
+		core.setFailed(errordetails);
 		core.setFailed(error); 
 		return;
 	}
 }
+
 
 async function commitNewMDFile(path, sha, encoding, updatedContent) {
 	try {
@@ -10029,12 +10056,17 @@ async function commitNewMDFile(path, sha, encoding, updatedContent) {
 		console.log("INFO: MD FILE UPDATED. COMPLETED.");
 
 	} catch (err) {
-		//console.log(err);
-		
+		const errordetails = `commitNewMDFile:: ` + 
+							 `UPDATE_MDFILE_USER_NAME:${updatemdfileusername} or ` +
+							 `UPDATE_MDFILE_REPO_NAME:${updatemdfilereponame} or ` + 
+							 `UPDATE_MDFILE_BRANCH_NAME:${updatemdfilebranchname} or ` + 
+					 		 `UPDATE_MDFILE_NAME:${updatemdfilename}`; 
+		core.setFailed(errordetails);
 		core.setFailed(err); 
 		return;
 	}
 }
+
 
 function prepareCommitsAsListLineString(data){
 	let result = "";
@@ -10080,8 +10112,29 @@ function prepareCommitsAsTableLineString(data){
 	return result;
 }
 
-getAllCommits();
 
+function prepareCommitsAsCustomLineString(data, customLineTemplate){
+	let result = "";
+	for (let i = 0; i < data.length; i++) {
+		const { commit } = data[i];
+
+		const commiturlsplt = commit.url.split('/');
+		const commiturlid = commiturlsplt[commiturlsplt.length - 1];
+		const commitlink = `https://github.com/${getcommitsusername}/${getcommitsreponame}/commit/${commiturlid}`;
+
+		const newcustomline = customLineTemplate
+			.replaceAll(customcommitauthornameparameter, commit.author.name)
+			.replaceAll(customcommitauthoremailparameter, commit.author.email)
+			.replaceAll(customcommitlinkparameter, commitlink)
+			.replaceAll(customcommitmessageparameter, commit.message)
+			.replaceAll(customcommitdateparameter, commit.author.date);
+
+		result += `${newcustomline} \n`;	
+	}
+	return result;
+}
+
+Run();
 })();
 
 module.exports = __webpack_exports__;
