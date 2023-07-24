@@ -7,7 +7,8 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 
 ## Live Preview
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Mon%20Jul%2024%202023%2003%3A31%3A20%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Mon%20Jul%2024%202023%2004%3A07%3A09%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/74a5d495bcc53885bba5a08ff80ce95f7648015e) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T03:31:21Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/5ebd469ddbbd8b469d4e310d1b43e9579065049f) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T03:06:45Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/b0f714cb76ffa5dd17ae2530e6d2770162302f42) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T02:44:12Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/b12ab7fef0377c2849f41347965386cb74032a43) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-24T02:01:29Z 
@@ -17,7 +18,6 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/f171576aaae81ace35b0fd0b005476698bd25879) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T22:31:04Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/cf4b97e00a56a684750ce8e5042be0ddb4d01e30) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T22:03:40Z 
 - [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/ad2ce4a7fd275a09222391a00113a392c76b3771) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T21:31:23Z 
-- [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/6ee14ef19126ad6310822dffd55eaea3e4bb5f59) - [M. Akif Tokatlioglu](mailto:akifmt@gmail.com) - 2023-07-23T21:03:06Z 
 <!-- Latest_Commits_End -->
 
 ## Instructions
