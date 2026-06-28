@@ -7,7 +7,9 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 
 ## Live Preview
 <!-- Latest_Commits_Start -->
-![updated](https://img.shields.io/badge/Updated-Tue%20Jul%2025%202023%2000%3A06%3A07%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+![updated](https://img.shields.io/badge/Updated-Sun%20Jun%2028%202026%2000%3A44%3A56%20GMT%2B0000%20(Coordinated%20Universal%20Time)-blue.svg)
+- :page_facing_up: [v2.0.0](https://github.com/akifmt/github-update-recent-commits/commit/99e08bc0b1eda791cd6f634d70254576df0e40db) - 2026-06-28T00:38:09Z 
+- :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/cd394fc82c6de16f589173f9c5db20db7e96cb29) - 2023-07-25T00:06:08Z 
 - :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/529bf38d7df4a96cf0cd6f57a49434d2ec8fd990) - 2023-07-24T23:58:37Z 
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/cd2fb84c1eeef5ce9b89929f6a0c925630aa937b) - 2023-07-24T23:58:09Z 
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/b5e3940bbec03fa162ade7f091581629a0a36f51) - 2023-07-24T23:55:15Z 
@@ -16,8 +18,6 @@ Updates MD file with the recent commits. The configuration must be on the defaul
 - :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/8f6e7b848a2cddff91bcc1641a340cb0854b8f65) - 2023-07-24T23:36:08Z 
 - :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/c7064bc05f4c4b6b8050892768768144d506f57c) - 2023-07-24T23:35:49Z 
 - :page_facing_up: [Update README.md](https://github.com/akifmt/github-update-recent-commits/commit/4b3b5aa907ecbb4f2a9cf71179414d97c16e6c05) - 2023-07-24T23:34:26Z 
-- :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/51266a9cd73ea8a8db9d8299a1af31d57743cf7a) - 2023-07-24T23:34:03Z 
-- :page_facing_up: [Update action.yaml](https://github.com/akifmt/github-update-recent-commits/commit/f1a638d5fec24cc97d4c4ba4e30339681a87d63f) - 2023-07-24T23:29:50Z 
 <!-- Latest_Commits_End -->
 
 ## Instructions
